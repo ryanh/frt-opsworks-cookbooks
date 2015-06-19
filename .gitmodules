@@ -1,3 +1,6 @@
 [submodule "elasticsearch"]
 	path = elasticsearch
 	url = https://github.com/freerunningtech/cookbook-elasticsearch
+[submodule "opsworks_sidekiq"]
+	path = opsworks_sidekiq
+	url = https://github.com/drakerlabs/opsworks_sidekiq
