@@ -15,7 +15,8 @@ node[:deploy].each do |application, deploy|
 
     cwd "#{deploy[:deploy_to]}/current"
     user 'deploy'
-    code "bundle exec whenever --set environment=#{deploy[:rails_env]} --update-crontab #{application} --roles #{layers.join(',')}"
+    #code "bundle exec whenever --set environment=#{deploy[:rails_env]} --update-crontab #{application} --roles #{layers.join(',')}"
+    code "bundle exec whenever --set environment=#{deploy[:rails_env]} --update-crontab #{application}"
     only_if "cd #{deploy[:deploy_to]}/current && bundle show whenever"
   end
 end
