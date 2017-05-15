@@ -45,6 +45,13 @@ server {
   location / {
     proxy_set_header Access-Control-Allow-Origin *;
     add_header Access-Control-Allow-Origin *;
+
+    proxy_set_header Access-Control-Allow-Headers X-Requested-With;
+    add_header Access-Control-Allow-Headers X-Requested-With;
+
+    proxy_set_header Access-Control-Allow-Credentials true;
+    add_header Access-Control-Allow-Credentials true;
+
     add_header X-Backend-Server $hostname;
 
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
