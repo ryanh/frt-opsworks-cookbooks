@@ -16,7 +16,6 @@
 # language governing permissions and limitations under the License.
 #
 chef_gem "aws-sdk-core" do
-  version "~> 2.6"
   action :install
 end
 
